@@ -1,0 +1,49 @@
+# langchain
+.langchain.db
+langflow.db
+
+# api keys - please see chapter 3 or README for instructions
+config.py
+
+# mac
+.DS_Store
+
+# Distribution/Packaging
+.env
+.venv
+env/
+venv/
+wheels/
+*.egg
+.ruff_cache
+.mypy_cache.
+search_engine/faiss_index.db/
+.conda/
+
+# IDEs
+.idea
+.vs/
+.vscode/
+.spyderproject
+.spyproject
+.ipynb_checkpoints
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignored default folder with query files
+/queries/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# Byte-compiled / optimized / DLL files / Cache
+__pycache__/
+**/*.pyc
+.gradio/
+cache/
+
+# Logs
+logs/
+*.log
