@@ -25,3 +25,5 @@ ray==2.43.0
 rank_bm25==0.2.2
 langchain_mistralai==0.2.6
 wikipedia==1.4.0
+jq==1.11.0
+faiss-cpu==1.7.4
