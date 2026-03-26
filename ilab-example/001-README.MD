@@ -1,11 +1,13 @@
 ## Example 001
 
+When run this examples, change the path to the path in you environment. 
+
 1. Create the config
 ~~~
 ilab config init --profile /Users/asouza/repo/personal/ai-examples/ilab-example/001-config.yaml --taxonomy-path ./taxonomy
 ~~~
 
-2. Attach your repository taxonomy
+2. Attach your repository taxonomy (create a github repository prior to run this step)
 ~~~
 cd taxonomy
 git remote -v
@@ -35,4 +37,4 @@ ilab model list
 ilab model chat --model /Users/asouza/.cache/instructlab/models/granite-7b-lab-Q4_K_M.gguf
 ~~~
 
-Ask: 
+6. Interact with the chat model.
