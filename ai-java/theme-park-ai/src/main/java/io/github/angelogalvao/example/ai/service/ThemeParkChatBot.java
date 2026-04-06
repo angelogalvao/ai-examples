@@ -7,7 +7,9 @@ import io.quarkiverse.langchain4j.RegisterAiService;
 import io.quarkiverse.langchain4j.ToolBox;
 import jakarta.enterprise.context.SessionScoped;
 
-@RegisterAiService
+@RegisterAiService(
+        retrievalAugmentor = RidesRetrivalAugmentor.class
+)
 @SessionScoped
 public interface ThemeParkChatBot {
 
@@ -22,12 +24,19 @@ public interface ThemeParkChatBot {
         - What rides can I access with my height?
         - What is the best ride at the moment?
         - What is the waiting time for a given ride?
+        - What options I have to arrive to the theme park?
+    
+        If you need the location of the theme park to answer a question,
+        the theme park is located at Barcelona.
 
-        If questions are not about theme park or you don't know the answer, 
+        If questions are not about theme park or you don't know the answer,
         you should return always "I don't know".
-        Don't give information that it is wrong
+    
+        Don't give information that it is wrong.
     """)
     @UserMessage("""
+        The theme park is located at Barcelona.
+        
         The theme park user has the following question: {question}
         
         The answer must be max 2 lines.
